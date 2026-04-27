@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Facilities &amp; Pricing | SPARTAN ELITE</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:ital,wght@1,900&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#da8beb",
+                        "on-error": "#490006",
+                        "outline": "#767575",
+                        "tertiary": "#f2aaff",
+                        "primary": "#7eafff",
+                        "surface-container-high": "#201f1f",
+                        "primary-dim": "#0073df",
+                        "secondary": "#7899ff",
+                        "outline-variant": "#484847",
+                        "surface-container": "#1a1919",
+                        "on-tertiary-fixed": "#380047",
+                        "on-tertiary": "#641c77",
+                        "background": "#0e0e0e",
+                        "error": "#ff716c",
+                        "secondary-dim": "#7899ff",
+                        "surface-container-highest": "#262626",
+                        "tertiary-dim": "#da8beb",
+                        "error-dim": "#d7383b",
+                        "tertiary-container": "#e998fa",
+                        "tertiary-fixed": "#e998fa",
+                        "surface-tint": "#7eafff",
+                        "primary-fixed-dim": "#4493ff",
+                        "error-container": "#9f0519",
+                        "on-tertiary-fixed-variant": "#631b76",
+                        "surface-container-low": "#131313",
+                        "on-secondary": "#001b55",
+                        "on-secondary-container": "#c2cfff",
+                        "on-primary-fixed": "#000000",
+                        "primary-container": "#64a1ff",
+                        "on-surface-variant": "#adaaaa",
+                        "on-secondary-fixed": "#002d81",
+                        "on-primary-fixed-variant": "#002b5b",
+                        "inverse-on-surface": "#565555",
+                        "on-primary-container": "#00224a",
+                        "on-secondary-fixed-variant": "#214aac",
+                        "surface-bright": "#2c2c2c",
+                        "surface": "#0e0e0e",
+                        "inverse-surface": "#fcf9f8",
+                        "surface-dim": "#0e0e0e",
+                        "on-background": "#ffffff",
+                        "inverse-primary": "#005eb8",
+                        "on-primary": "#002e60",
+                        "secondary-fixed": "#c4d0ff",
+                        "on-error-container": "#ffa8a3",
+                        "secondary-fixed-dim": "#b0c2ff",
+                        "primary-fixed": "#64a1ff",
+                        "on-surface": "#ffffff",
+                        "secondary-container": "#103fa1",
+                        "surface-variant": "#262626",
+                        "surface-container-lowest": "#000000",
+                        "on-tertiary-container": "#590e6d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Lexend"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0e0e0e;
+            font-family: 'Manrope', sans-serif;
+            color: white;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .lexend-italic {
+            font-family: 'Lexend', sans-serif;
+            font-style: italic;
+            font-weight: 900;
+        }
+
+        .text-kinetic {
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        #mobile-menu.active {
+            display: block;
+        }
+
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+
+<body class="bg-background overflow-x-hidden">
+    <!-- TopNavBar (Updated to match About Us Page) -->
+    <header class="fixed top-0 w-full z-[60] bg-black border-b border-white/5">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center gap-12">
+                <div class="text-xl italic font-black tracking-tighter text-white cursor-pointer">SPARTAN ELITE</div>
+                <!-- Desktop Links (Left-aligned) -->
+                <div class="hidden md:flex gap-8 items-center">
+                    <a class="text-zinc-400 hover:text-white transition-colors font-medium text-xs tracking-widest uppercase"
+                        href="about.html">About</a>
+                    <a class="text-zinc-400 hover:text-white transition-colors font-medium text-xs tracking-widest uppercase"
+                        href="gallery.html">Gallery</a>
+                    <a class="text-zinc-400 hover:text-white transition-colors font-medium text-xs tracking-widest uppercase"
+                        href="EQUIPMENT.html">Equipments</a>
+                    <a class="text-primary font-bold text-xs tracking-widest uppercase relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:height-[2px] after:bg-primary"
+                        href="FACILITIES.html">Facilities</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-4 md:gap-8">
+                <!-- Social & Contact Icons -->
+                <div class="hidden sm:flex items-center gap-6">
+                    <a class="text-zinc-400 hover:text-primary transition-colors flex items-center" href="#">
+                        <span class="material-symbols-outlined text-xl"
+                            data-icon="brand_awareness">brand_awareness</span>
+                    </a>
+                    <a class="text-zinc-400 hover:text-green-500 transition-colors flex items-center" href="#">
+                        <span class="material-symbols-outlined text-xl" data-icon="chat">chat</span>
+                    </a>
+                    <a class="text-zinc-400 hover:text-white transition-colors flex items-center" href="#">
+                        <span class="material-symbols-outlined text-xl" data-icon="call">call</span>
+                    </a>
+                </div>
+                <!-- Join Elite CTA -->
+                <button
+                    class="hidden md:block bg-primary text-black px-6 py-2 rounded-full text-xs font-black tracking-widest hover:bg-white transition-colors">JOIN
+                    ELITE</button>
+                <!-- Mobile Toggle -->
+                <button class="md:hidden text-white flex items-center" id="menu-open">
+                    <span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!-- SideNavBar (Mobile Menu Placeholder - Updated to match About Us) -->
+    <div class="hidden fixed inset-0 z-[100]" id="mobile-menu">
+        <div class="absolute inset-0 bg-background/95 backdrop-blur-xl" id="menu-overlay"></div>
+        <aside
+            class="fixed inset-y-0 right-0 w-full sm:w-[400px] z-[110] bg-zinc-950 flex flex-col h-full p-8 shadow-2xl border-l border-white/5">
+            <div class="flex justify-between items-center mb-12">
+                <div class="lexend-italic text-2xl tracking-tighter text-white">MENU</div>
+                <button class="text-zinc-400 hover:text-white" id="menu-close">
+                    <span class="material-symbols-outlined text-3xl" data-icon="close">close</span>
+                </button>
+            </div>
+            <div class="flex flex-col gap-4 mb-auto">
+                <a class="bg-surface-container-low text-zinc-400 hover:text-white p-6 rounded-2xl flex items-center justify-between group transition-all"
+                    href="about.html">
+                    <span class="lexend-italic text-xl uppercase">About</span>
+                    <span
+                        class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity"
+                        data-icon="arrow_forward">arrow_forward</span>
+                </a>
+                <a class="bg-surface-container-low text-zinc-400 hover:text-white p-6 rounded-2xl flex items-center justify-between group transition-all"
+                    href="gallery.html">
+                    <span class="lexend-italic text-xl uppercase">Gallery</span>
+                    <span
+                        class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity"
+                        data-icon="arrow_forward">arrow_forward</span>
+                </a>
+                <a class="bg-surface-container-low text-zinc-400 hover:text-white p-6 rounded-2xl flex items-center justify-between group transition-all"
+                    href="EQUIPMENT.html">
+                    <span class="lexend-italic text-xl uppercase">Equipments</span>
+                    <span
+                        class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity"
+                        data-icon="arrow_forward">arrow_forward</span>
+                </a>
+                <a class="bg-primary/10 text-primary p-6 rounded-2xl flex items-center justify-between group transition-all"
+                    href="FACILITIES.html">
+                    <span class="lexend-italic text-xl uppercase">Facilities</span>
+                    <span class="material-symbols-outlined text-primary" data-icon="arrow_forward">arrow_forward</span>
+                </a>
+            </div>
+            <div class="mt-12 flex flex-col gap-4">
+                <button
+                    class="w-full bg-primary text-black py-5 rounded-2xl lexend-italic text-lg tracking-widest hover:scale-[0.98] transition-transform">JOIN
+                    ELITE</button>
+                <button
+                    class="w-full border border-white/10 text-white py-5 rounded-2xl font-bold tracking-widest hover:bg-white/5 transition-colors">MEMBER
+                    LOGIN</button>
+                <div class="mt-8 flex justify-center gap-8">
+                    <span class="material-symbols-outlined text-zinc-500"
+                        data-icon="brand_awareness">brand_awareness</span>
+                    <span class="material-symbols-outlined text-zinc-500" data-icon="chat">chat</span>
+                    <span class="material-symbols-outlined text-zinc-500" data-icon="call">call</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <!-- Hero Section -->
+    <section class="relative h-[716px] flex items-end overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img alt="Elite Gym Interior" class="w-full h-full object-cover brightness-50"
+                data-alt="dramatic wide angle shot of a high-end luxury gym with black elite equipment, neon blue accents, and polished concrete floors"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTwIU1o68-jb_QnJdfQvMtWxOIUay5XCZm8cOwlXN_QzKk4AuFbtRrtJiKFNFrVRGmOZnBnvDGlNuVwSYas6Z_fh6HMo0_fR4gN_SuSaVEAEqc38tgDRGDubqs6H_X3atZy2OfcH0R5YjVJxDR_tbv3g7zIbDscksAicH5GDKtYmPUgfOXp_4NlM-g7UiMD89gq5z-8zNwV54_Gfs0ZiFl7VuwpJ8If8Qk6jJP404gqHkTQlfdvCnqPXlE__-VUPxS1JjBm61mxf0" />
+            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 pb-16 w-full">
+            <div class="flex flex-col gap-2">
+                <span class="text-primary tracking-[0.4em] font-bold text-xs uppercase">Performance • Discipline</span>
+                <h1 class="text-6xl md:text-8xl lexend-italic text-kinetic leading-none">ELITE<br /><span
+                        class="text-primary">FACILITIES</span></h1>
+            </div>
+        </div>
+    </section>
+    <!-- Amenities Bento Grid -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[600px]">
+            <!-- Featured Amenity -->
+            <div
+                class="md:col-span-2 md:row-span-2 bg-surface-container-low rounded-lg p-10 flex flex-col justify-between group overflow-hidden relative">
+                <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <span class="material-symbols-outlined text-[120px]"
+                        data-icon="fitness_center">fitness_center</span>
+                </div>
+                <div class="relative z-10">
+                    <span class="text-primary font-bold text-xs tracking-widest uppercase">Signature</span>
+                    <h3 class="lexend-italic text-4xl mt-4">100% IMPORTED<br />ELITE EQUIPMENT</h3>
+                    <p class="text-on-surface-variant mt-6 max-w-xs font-medium">Precision-engineered machinery sourced
+                        from global performance leaders to ensure peak biomechanical efficiency.</p>
+                </div>
+                <div class="mt-8">
+                    <button class="flex items-center gap-2 text-white font-bold group-hover:gap-4 transition-all">
+                        EXPLORE THE GEAR <span class="material-symbols-outlined text-primary"
+                            data-icon="arrow_forward">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+            <!-- AC Climate -->
+            <div class="md:col-span-2 bg-surface-container rounded-lg p-8 flex items-center justify-between">
+                <div>
+                    <h4 class="lexend-italic text-2xl uppercase">Full AC Climate Control</h4>
+                    <p class="text-on-surface-variant mt-2 text-sm">Industrial-grade ventilation maintained at a crisp
+                        19°C.</p>
+                </div>
+                <div class="bg-surface-container-highest p-4 rounded-full">
+                    <span class="material-symbols-outlined text-primary text-3xl" data-icon="ac_unit">ac_unit</span>
+                </div>
+            </div>
+            <!-- Parking -->
+            <div class="bg-surface-container rounded-lg p-8 flex flex-col justify-between">
+                <span class="material-symbols-outlined text-primary text-3xl"
+                    data-icon="local_parking">local_parking</span>
+                <div>
+                    <h4 class="lexend-italic text-xl uppercase mt-4">Ample Parking Space</h4>
+                    <p class="text-on-surface-variant mt-1 text-xs">Secure valet and designated member zones.</p>
+                </div>
+            </div>
+            <!-- Water -->
+            <div class="bg-primary-container rounded-lg p-8 flex flex-col justify-between text-on-primary-container">
+                <span class="material-symbols-outlined text-3xl" data-icon="water_drop">water_drop</span>
+                <div>
+                    <h4 class="lexend-italic text-xl uppercase mt-4">RO Water Station</h4>
+                    <p class="opacity-80 mt-1 text-xs font-bold">Hot, Cold, &amp; Warm options always available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Section -->
+    <section class="bg-surface-container-low py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+                <div>
+                    <h2 class="text-5xl md:text-6xl lexend-italic text-kinetic">MEMBERSHIP<br />TIERS</h2>
+                    <p class="text-on-surface-variant mt-4 max-w-md">No hidden fees. Pure performance. Join the elite
+                        ranks and push your boundaries with our flexible plans.</p>
+                </div>
+                <div
+                    class="bg-surface-container-highest px-8 py-4 rounded-full flex gap-4 items-center border border-outline-variant/20">
+                    <span class="text-xs font-bold tracking-widest text-primary uppercase">Admission Fee:</span>
+                    <span class="lexend-italic text-xl">1000 + 5000 RUPEES</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Monthly -->
+                <div class="bg-surface p-10 rounded-lg flex flex-col gap-8 hover:scale-[1.02] transition-transform">
+                    <div>
+                        <h3 class="lexend-italic text-2xl">MONTHLY</h3>
+                        <p class="text-on-surface-variant text-sm mt-1">Full Facility Access</p>
+                    </div>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-4xl font-black lexend-italic">1000</span>
+                        <span class="text-on-surface-variant text-sm font-bold uppercase tracking-widest">Rupees /
+                            Mo</span>
+                    </div>
+                    <ul class="flex flex-col gap-4 mt-4">
+                        <li class="flex items-center gap-3 text-sm font-medium"><span
+                                class="material-symbols-outlined text-primary text-lg"
+                                data-icon="check_circle">check_circle</span> Unlimited Gym Access</li>
+                        <li class="flex items-center gap-3 text-sm font-medium"><span
+                                class="material-symbols-outlined text-primary text-lg"
+                                data-icon="check_circle">check_circle</span> Locker Room Access</li>
+                        <li class="flex items-center gap-3 text-sm font-medium"><span
+                                class="material-symbols-outlined text-primary text-lg"
+                                data-icon="check_circle">check_circle</span> All Amenities Included</li>
+                    </ul>
+                    <button
+                        class="mt-auto w-full py-4 rounded-xl border border-outline-variant/30 font-bold tracking-widest hover:bg-surface-bright transition-colors">SELECT
+                        PLAN</button>
+                </div>
+                <!-- Yearly - Featured -->
+                <div
+                    class="bg-primary-container p-10 rounded-lg flex flex-col gap-8 transform md:-translate-y-6 shadow-2xl relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 bg-white text-primary-container px-6 py-2 font-black text-xs lexend-italic">
+                        MOST POPULAR</div>
+                    <div class="text-on-primary-container">
+                        <h3 class="lexend-italic text-2xl">YEARLY</h3>
+                        <p class="opacity-80 text-sm mt-1">Elite Commitment</p>
+                    </div>
+                    <div class="flex items-baseline gap-1 text-on-primary-container">
+                        <span class="text-5xl font-black lexend-italic">8000</span>
+                        <span class="opacity-80 text-sm font-bold uppercase tracking-widest">Rupees / Year</span>
+                    </div>
+                    <ul class="flex flex-col gap-4 mt-4 text-on-primary-container">
+                        <li class="flex items-center gap-3 text-sm font-bold"><span
+                                class="material-symbols-outlined text-lg fill-icon" data-icon="verified">verified</span>
+                            2 Months Free Included</li>
+                        <li class="flex items-center gap-3 text-sm font-bold"><span
+                                class="material-symbols-outlined text-lg fill-icon" data-icon="verified">verified</span>
+                            Priority Support</li>
+                        <li class="flex items-center gap-3 text-sm font-bold"><span
+                                class="material-symbols-outlined text-lg fill-icon" data-icon="verified">verified</span>
+                            Guest Passes (4x)</li>
+                        <li class="flex items-center gap-3 text-sm font-bold"><span
+                                class="material-symbols-outlined text-lg fill-icon" data-icon="verified">verified</span>
+                            Health Consultation</li>
+                    </ul>
+                    <button
+                        class="mt-auto w-full py-4 rounded-xl bg-on-primary-container text-primary-container font-black tracking-widest hover:scale-95 transition-transform uppercase">Claim
+                        Elite Access</button>
+                </div>
+                <!-- Personal Training -->
+                <div class="bg-surface p-10 rounded-lg flex flex-col gap-8 hover:scale-[1.02] transition-transform">
+                    <div>
+                        <h3 class="lexend-italic text-2xl">PT ADD-ON</h3>
+                        <p class="text-on-surface-variant text-sm mt-1">Specialized Guidance</p>
+                    </div>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-4xl font-black lexend-italic">+3000</span>
+                        <span class="text-on-surface-variant text-sm font-bold uppercase tracking-widest">Rupees /
+                            Mo</span>
+                    </div>
+                    <ul class="flex flex-col gap-4 mt-4">
+                        <li class="flex items-center gap-3 text-sm font-medium"><span
+                                class="material-symbols-outlined text-primary text-lg"
+                                data-icon="check_circle">check_circle</span> Dedicated Coach</li>
+                        <li class="flex items-center gap-3 text-sm font-medium"><span
+                                class="material-symbols-outlined text-primary text-lg"
+                                data-icon="check_circle">check_circle</span> Custom Nutrition Plan</li>
+                        <li class="flex items-center gap-3 text-sm font-medium"><span
+                                class="material-symbols-outlined text-primary text-lg"
+                                data-icon="check_circle">check_circle</span> Weekly Form Checks</li>
+                    </ul>
+                    <button
+                        class="mt-auto w-full py-4 rounded-xl border border-outline-variant/30 font-bold tracking-widest hover:bg-surface-bright transition-colors">ADD
+                        TO PLAN</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Final CTA Section -->
+    <section class="relative py-32 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img alt="Athlete training" class="w-full h-full object-cover grayscale brightness-[0.2]"
+                data-alt="dramatic black and white close-up of a muscular athlete focused during a heavy lift with sweat and intensity, cinematic lighting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWXpaQxfa_4HlxGTXZhhCbrhGxn8R9uA5yEVqViabSwrcV91Wp-dhPYwPWZRWIq9Aw7mSDaThPBJr0RLWbt0cpytcsxCO_q-7utlS1kdBYzR4jpVgwBySW0NnoysRkaYv6kwxjLj6wNLLy8RmyN_lwUMlgY0maYX9mNca5-KRij82wEDGU0lk7Hy1pDnLUfA0v4vFK7JkRBje3nqaIfn-XPdFhkyjwraAzhHlNiNKslzfOeZmrjMzc4HavpekCVFrqjhYWdoJoiv4" />
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-5xl md:text-7xl lexend-italic text-kinetic mb-8 leading-tight">THE ONLY THING<br />MISSING
+                IS <span class="text-primary">YOU</span></h2>
+            <button
+                class="bg-primary text-black text-lg px-12 py-5 rounded-xl font-black tracking-[0.2em] hover:scale-105 transition-transform shadow-[0_20px_50px_-15px_rgba(126,175,255,0.3)]">SECURE
+                YOUR SPOT</button>
+            <p class="mt-8 text-on-surface-variant font-medium text-sm tracking-widest uppercase">Limited Founding
+                Memberships Remaining</p>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="w-full py-12 px-6 bg-zinc-950 border-t border-white/5">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            <div class="flex flex-col gap-4">
+                <div class="text-lg italic font-black text-white">SPARTAN ELITE</div>
+                <p class="text-zinc-500 text-sm max-w-xs font-medium">Elevating performance through discipline and
+                    world-class equipment in a premium noir sanctuary.</p>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h5 class="text-white font-bold text-sm tracking-widest uppercase">Navigation</h5>
+                <nav class="flex flex-col gap-2">
+                    <a class="text-zinc-500 hover:text-white transition-colors text-sm" href="#">About</a>
+                    <a class="text-zinc-500 hover:text-white transition-colors text-sm" href="#">Gallery</a>
+                    <a class="text-zinc-500 hover:text-white transition-colors text-sm" href="#">Equipments</a>
+                    <a class="text-primary text-sm font-bold" href="#">Facilities</a>
+                </nav>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h5 class="text-white font-bold text-sm tracking-widest uppercase">Legal</h5>
+                <nav class="flex flex-col gap-2">
+                    <a class="text-zinc-500 hover:text-white transition-colors text-sm" href="#">Membership Terms</a>
+                    <a class="text-zinc-500 hover:text-white transition-colors text-sm" href="#">Privacy Policy</a>
+                    <a class="text-zinc-500 hover:text-white transition-colors text-sm" href="#">Facility Rules</a>
+                    <a class="text-zinc-500 hover:text-white transition-colors text-sm" href="#">Contact Us</a>
+                </nav>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h5 class="text-white font-bold text-sm tracking-widest uppercase">Contact</h5>
+                <p class="text-zinc-500 text-sm">ELITE PLAZA, SECTOR 45<br />PREMIUM PERFORMANCE ZONE<br />+91 999 888
+                    7777</p>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-zinc-500 text-[10px] tracking-[0.3em] font-bold">© 2024 SPARTAN ELITE. ALL RIGHTS RESERVED.
+            </p>
+            <div class="flex gap-6">
+                <span class="material-symbols-outlined text-zinc-500 hover:text-white cursor-pointer text-xl"
+                    data-icon="brand_awareness">brand_awareness</span>
+                <span class="material-symbols-outlined text-zinc-500 hover:text-white cursor-pointer text-xl"
+                    data-icon="sports_martial_arts">sports_martial_arts</span>
+                <span class="material-symbols-outlined text-zinc-500 hover:text-white cursor-pointer text-xl"
+                    data-icon="monitoring">monitoring</span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const menuOpen = document.getElementById('menu-open');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+
+        const toggleMenu = () => {
+            mobileMenu.classList.toggle('hidden');
+            document.body.classList.toggle('overflow-hidden');
+        };
+
+        menuOpen.addEventListener('click', toggleMenu);
+        menuClose.addEventListener('click', toggleMenu);
+        menuOverlay.addEventListener('click', toggleMenu);
+    </script>
+</body>
+
+</html>

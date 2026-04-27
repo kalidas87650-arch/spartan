@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SPARTANS - High-Frequency Performance</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#1275e2",
+                        "on-primary": "#ffffff",
+                        "surface": "#ffffff",
+                        "on-surface": "#111827",
+                        "surface-variant": "#f3f4f6",
+                        "on-surface-variant": "#4b5563",
+                        "outline": "#d1d5db",
+                        "background": "#000000",
+                        "on-background": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-container {
+            background: rgba(255, 255, 255, 0.05);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background font-body text-on-surface-variant overflow-hidden selection:bg-primary/30 selection:text-primary">
+    <!-- Background Image Layer -->
+    <div class="fixed inset-0 z-0">
+        <img alt="Background Athlete" class="w-full h-full object-cover"
+            src="img6.png.jpeg" />
+        <div class="absolute inset-0 bg-black/40"></div>
+    </div>
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-8 py-6 bg-black/20 backdrop-blur-sm border-b border-white/10">
+        <div class="font-headline font-black tracking-tighter text-2xl text-white uppercase">
+            SPARTANS
+        </div>
+
+        </div>
+    </nav>
+    <!-- Main Content Canvas -->
+    <main class="relative h-screen w-full flex items-center justify-center px-6 z-10">
+        <!-- Glassmorphism Card -->
+        <div
+            class="glass-container max-w-5xl w-full py-16 md:py-24 px-8 md:px-16 rounded-[2rem] shadow-2xl flex flex-col items-center text-center animate-in fade-in zoom-in duration-700">
+            <!-- Branding Accent -->
+            <div class="flex items-center gap-4 mb-8">
+                <span class="h-[1px] w-12 bg-primary"></span>
+                <span class="text-[12px] font-bold tracking-[0.4em] text-primary uppercase">
+                    Status: Optimal Performance
+                </span>
+                <span class="h-[1px] w-12 bg-primary"></span>
+            </div>
+            <!-- Spartans Title -->
+            <h1
+                class="font-headline font-black tracking-tighter text-7xl md:text-[9rem] leading-[0.85] mb-8 text-white select-none drop-shadow-2xl">
+                SPARTANS
+            </h1>
+            <!-- Sub-headline -->
+            <p
+                class="max-w-xl font-body font-light text-lg md:text-xl text-white/80 tracking-wide mb-12 leading-relaxed">
+                High-Frequency <span class="text-white font-bold border-b-2 border-primary">Performance</span>
+                Excellence for the Modern Digital Athlete.
+            </p>
+            <!-- CTA Container -->
+            <div class="flex flex-col items-center gap-10">
+                <!-- Primary Action -->
+                <a href="about.html">
+                    <button type="button"
+                        class="group relative px-12 py-5 bg-primary text-white rounded-full font-extrabold text-base tracking-[0.1em] transition-all duration-300 hover:bg-primary/90 hover:scale-105 hover:shadow-[0_0_40px_rgba(18,117,226,0.4)] active:scale-95 uppercase">
+                        ENTER THE GYM
+                    </button>
+                </a>
+                <!-- Secondary Visual -->
+                <div class="flex flex-col items-center">
+                    <span class="material-symbols-outlined text-primary animate-bounce mb-2">expand_more</span>
+                    <span class="text-[10px] font-bold tracking-[0.3em] text-white/40 uppercase">Initiate
+                        Protocol</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Visual Accents / Side Metadata -->
+    <aside class="hidden xl:flex fixed right-12 bottom-12 flex-col items-end gap-3 pointer-events-none z-20">
+        <div class="text-[11px] font-medium font-mono text-primary tracking-widest">LAT: 34.0522° N</div>
+        <div class="text-[11px] font-medium font-mono text-primary tracking-widest">LNG: 118.2437° W</div>
+        <div class="h-16 w-[2px] bg-primary/40 mt-2"></div>
+    </aside>
+    <aside class="hidden xl:flex fixed left-12 bottom-12 flex-col items-start gap-3 pointer-events-none z-20">
+        <div class="text-[11px] font-medium font-mono text-white/40 tracking-widest">VERSION // 2.0.48</div>
+        <div class="text-[11px] font-medium font-mono text-white/40 tracking-widest">CORE // ACTIVE</div>
+        <div class="h-16 w-[2px] bg-white/20 mt-2"></div>
+    </aside>
+    <!-- Bottom Ornamentation -->
+    <div class="fixed bottom-0 left-0 w-full h-[1px] bg-white/10 z-20"></div>
+    <script type="text/javascript">
+            (function (l) {
+                if (l.search[1] === "/") {
+                    var decoded = l.search
+                        .slice(1)
+                        .split("&")
+                        .map(function (s) {
+                            return s.replace(/~and~/g, "&");
+                        })
+                        .join("?");
+                    window.history.replaceState(
+                        null,
+                        null,
+                        l.pathname.slice(0, -1) + decoded + l.hash
+                    );
+                }
+            })(window.location);
+    </script>
+</body>
+
+</html>

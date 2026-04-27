@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="" lang="en">
+
+<head>
+    <title>About Spartans Fitness - Founded by Prabu</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        error: "#ff1744",
+                        "on-tertiary": "#ffffff",
+                        "surface-container": "#121214",
+                        background: "#080809",
+                        "inverse-on-surface": "#ffffff",
+                        primary: "#0084FF",
+                        "primary-container": "#00479b",
+                        secondary: "#00f2ff",
+                        tertiary: "#ff3d00",
+                        surface: "#0e0e10",
+                        "on-surface": "#ffffff",
+                        "on-surface-variant": "#cbd5e1",
+                        outline: "#334155"
+                    },
+                    borderRadius: {
+                        DEFAULT: "9999px",
+                        lg: "1.5rem",
+                        xl: "2rem",
+                        full: "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Lexend", "sans-serif"],
+                        body: ["Lexend", "sans-serif"],
+                        label: ["Lexend", "sans-serif"],
+                        display: "Lexend"
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        body {
+            background-color: #080809;
+            color: white;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .invert-img {
+            filter: invert(1);
+        }
+
+        .glass-panel {
+            -webkit-backdrop-filter: blur(40px);
+            backdrop-filter: blur(40px);
+            background: rgba(20, 20, 22, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .kinetic-text {
+            line-height: 0.85;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .text-glow-primary {
+            text-shadow: 0 0 20px rgba(0, 132, 255, 0.5);
+        }
+
+        .shadow-hyper {
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Mobile Menu State */
+        #mobile-menu.hidden {
+            display: none;
+        }
+
+        #mobile-menu:not(.hidden) {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body class="font-body selection:bg-primary selection:text-white text-white bg-background">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-black border-b border-white/10 shadow-2xl">
+        <div class="flex justify-between items-center px-6 max-w-screen-2xl mx-auto py-5">
+            <!-- Left Side: Logo + Nav Items (Desktop) -->
+            <div class="flex items-center gap-12">
+                <div class="text-2xl font-black italic tracking-widest text-white font-headline">SPARTAN FITNESS CENTER
+                </div>
+                <!-- Desktop Links: Positioned on the LEFT next to Logo -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="text-primary border-b-2 border-primary pb-1 font-headline tracking-tighter uppercase text-xs font-bold"
+                        href="about.html">About</a>
+                    <a class="text-zinc-400 hover:text-primary transition-colors font-headline tracking-tighter uppercase text-xs"
+                        href="gallery.html">GALLERY</a>
+                    <a class="text-zinc-400 hover:text-primary transition-colors font-headline tracking-tighter uppercase text-xs"
+                        href="EQUIPMENT.html">EQUIPMENTS</a>
+                    <a class="text-zinc-400 hover:text-primary transition-colors font-headline tracking-tighter uppercase text-xs"
+                        href="FACILITIES.html">FACILITIES</a>
+                </div>
+            </div>
+            <!-- Hamburger Trigger for Mobile -->
+            <div class="flex items-center gap-4 mr-2 md:mr-0">
+                <a class="text-white hover:text-primary active:text-primary transition-colors duration-300 flex items-center justify-center group"
+                    href="https://www.instagram.com/prabu_spartans_master?igsh=eWs3Mm9kbjRhMXRn">
+                    <img alt="Instagram"
+                        class="w-6 h-6 object-contain invert brightness-0 group-hover:brightness-100 group-hover:sepia-[1] group-hover:hue-rotate-[190deg] group-hover:saturate-[500%] group-active:sepia-[1] group-active:hue-rotate-[190deg] group-active:saturate-[500%] transition-all duration-300 invert-img"
+                        src="social_12940260.png" />
+                </a>
+                <a class="text-white hover:text-primary transition-colors duration-300 flex items-center justify-center"
+                    href="https://wa.me/9787565001">
+                    <span class="material-symbols-outlined text-2xl">chat</span>
+                </a>
+                <a class="text-white hover:text-primary transition-colors duration-300 flex items-center justify-center"
+                    href="tel:9787565001">
+                    <span class="material-symbols-outlined text-2xl">call</span>
+                </a>
+            </div><button class="md:hidden text-white p-2" id="menu-toggle">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+        <!-- Mobile Side-Drawer Menu Overlay -->
+        <div class="hidden fixed inset-0 z-[60] flex-col animate-in fade-in slide-in-from-right duration-300 bg-surface border-l border-white/10 shadow-2xl"
+            id="mobile-menu">
+            <!-- Mobile Menu Header -->
+            <div class="flex justify-between items-center p-6 border-b border-white/10">
+                <div class="flex items-center gap-4">
+                    <button class="text-white bg-white/10 p-2 rounded-lg" id="menu-close">
+                        <span class="material-symbols-outlined text-2xl">close</span>
+                    </button>
+                    <span class="font-headline font-black text-2xl uppercase italic text-primary">MENU</span>
+                </div>
+            </div>
+            <!-- Mobile Menu Links (Vertical List) -->
+            <div class="flex flex-col py-4 pt-8">
+                <a class="flex items-center gap-4 px-8 py-6 bg-primary text-white font-headline font-bold uppercase tracking-widest text-lg rounded-2xl mx-6 mb-3 shadow-lg shadow-primary/20"
+                    href="#">
+                    <span class="material-symbols-outlined">info</span> About
+                </a>
+                <a class="flex items-center gap-4 px-8 py-6 text-white bg-white/5 hover:bg-white/10 font-headline font-bold uppercase tracking-widest text-lg rounded-2xl mx-6 mb-3 border border-white/5 transition-colors"
+                    href="gallery.html">
+                    <span class="material-symbols-outlined">grid_view</span> Gallery
+                </a>
+                <a class="flex items-center gap-4 px-8 py-6 text-white bg-white/5 hover:bg-white/10 font-headline font-bold uppercase tracking-widest text-lg rounded-2xl mx-6 mb-3 border border-white/5 transition-colors"
+                    href="equipment.html">
+                    <span class="material-symbols-outlined">fitness_center</span> Equipment
+                </a>
+                <a class="flex items-center gap-4 px-8 py-6 text-white bg-white/5 hover:bg-white/10 font-headline font-bold uppercase tracking-widest text-lg rounded-2xl mx-6 mb-3 border border-white/5 transition-colors"
+                    href="facilities.html">
+                    <span class="material-symbols-outlined">bolt</span> FACILITIES
+                </a>
+            </div>
+        </div>
+    </nav>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+
+        const mobileLinks = mobileMenu.querySelectorAll('a, button:not(#menu-close)');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+    <main class="relative">
+        <!-- Hero Section -->
+        <section class="relative h-screen flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent z-10"></div>
+                <img alt="Spartan athlete training" class="w-full h-full object-cover grayscale brightness-50"
+                    src="img6.png.jpeg" />
+            </div>
+            <div class="relative z-20 px-6 md:px-20 max-w-7xl">
+                <span
+                    class="inline-block px-4 py-1 rounded-full border-2 border-primary text-primary font-headline text-[10px] font-black tracking-[0.3em] uppercase mb-6 bg-primary/5">Founded
+                    by Prabu</span>
+                <h1
+                    class="font-headline font-black italic text-5xl md:text-7xl lg:text-[10rem] kinetic-text uppercase tracking-tighter mb-4 text-white">
+                    ULTIMATE<br />
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-primary drop-shadow-sm">STRENGTH</span>
+                </h1>
+                <p class="max-w-md text-zinc-300 text-lg font-medium leading-relaxed mb-8 drop-shadow-md">
+                    Prabu didn't just build a gym; he engineered a sanctuary for high-performance. Spartans is the
+                    physical manifestation of his life's mission.
+                </p>
+            </div>
+            <!-- Vertical Kinetic Sidebar -->
+            <div
+                class="absolute right-0 top-0 h-full w-24 hidden lg:flex flex-col items-center justify-center gap-12 border-l border-white/10 bg-black/40 backdrop-blur-md">
+                <div
+                    class="rotate-90 whitespace-nowrap font-headline text-[10px] font-black tracking-[0.5em] text-primary uppercase">
+                    Prabu • Discipline • Performance</div>
+            </div>
+        </section>
+        <!-- Asymmetric Mission Grid -->
+        <section class="py-32 px-6 md:px-20 bg-background">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-5 relative">
+                    <div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/20 rounded-full blur-[100px]"></div>
+                    <div
+                        class="relative rounded-2xl overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.8)] border border-white/10 group">
+                        <img alt="Master Trainer Prabu"
+                            class="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105"
+                            src="img7.png.jpeg" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent mix-blend-overlay">
+                        </div>
+                    </div>
+                    <div
+                        class="absolute bottom-8 -right-8 glass-panel p-8 rounded-2xl max-w-xs shadow-2xl border-l-4 border-primary">
+                        <h4 class="font-headline font-black text-primary mb-2 uppercase tracking-widest text-[10px]">
+                            Founder &amp; Master Trainer</h4>
+                        <p class="text-xl font-black text-white mb-2 italic">PRABU</p>
+                        <p class="text-sm text-zinc-300 font-medium leading-relaxed">"Fusing peak human biomechanics
+                            with Spartan-grade discipline was my only goal."</p>
+                    </div>
+                </div>
+                <div class="md:col-span-7 md:pl-16">
+                    <h2
+                        class="font-headline font-black text-6xl md:text-8xl uppercase italic tracking-tighter mb-16 text-white">
+                        THE <span class="text-primary text-glow-primary">VISION</span>
+                    </h2>
+                    <div class="space-y-12">
+                        <div class="flex gap-10 group">
+                            <span
+                                class="font-headline font-black text-5xl text-zinc-800 group-hover:text-primary transition-colors duration-500">01</span>
+                            <div>
+                                <h3
+                                    class="font-headline font-black text-2xl uppercase mb-3 tracking-tight text-white group-hover:text-primary transition-colors">
+                                    The Prabu Method</h3>
+                                <p class="text-zinc-400 font-medium text-lg leading-snug max-w-lg">Every training
+                                    protocol is personally vetted by Prabu, ensuring biomechanical efficiency is never
+                                    sacrificed.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-10 group">
+                            <span
+                                class="font-headline font-black text-5xl text-zinc-800 group-hover:text-primary transition-colors duration-500">02</span>
+                            <div>
+                                <h3
+                                    class="font-headline font-black text-2xl uppercase mb-3 tracking-tight text-white group-hover:text-primary transition-colors">
+                                    Spartan Environment</h3>
+                                <p class="text-zinc-400 font-medium text-lg leading-snug max-w-lg">Prabu designed our
+                                    spaces to breathe. Atmospheric lighting shifts to match the energy of the sessions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-10 group">
+                            <span
+                                class="font-headline font-black text-5xl text-zinc-800 group-hover:text-primary transition-colors duration-500">03</span>
+                            <div>
+                                <h3
+                                    class="font-headline font-black text-2xl uppercase mb-3 tracking-tight text-white group-hover:text-primary transition-colors">
+                                    Personalized Mastery</h3>
+                                <p class="text-zinc-400 font-medium text-lg leading-snug max-w-lg">We don't do mass
+                                    production. Prabu’s philosophy is built on individual tracking and real-time CNS
+                                    recovery.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Bento Stats Section -->
+        <section class="py-24 px-6 md:px-20 bg-background">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-none md:grid-rows-2 gap-6 h-auto md:h-[650px]">
+                    <div
+                        class="md:col-span-2 md:row-span-2 rounded-3xl overflow-hidden relative group shadow-[0_40px_80px_-15px_rgba(0,0,0,0.9)] border border-white/5 h-[400px] md:h-auto">
+                        <img alt="Training session"
+                            class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                            src="img21.png.jpeg"/>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+                        <div class="absolute bottom-10 left-10">
+                            <h4 class="font-headline text-3xl md:text-5xl font-black italic uppercase text-white mb-2">
+                                Prabu's Arena</h4>
+                            <p class="text-primary font-bold tracking-widest uppercase text-xs md:text-sm">Where expert
+                                coaching meets the iron.</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-surface-container rounded-3xl p-10 flex flex-col justify-center border border-white/10 hover:border-primary transition-all group shadow-xl">
+                        <span
+                            class="text-6xl md:text-7xl font-headline font-black text-primary group-hover:scale-110 transition-transform origin-left">500+</span>
+                        <span
+                            class="font-headline uppercase text-[10px] font-black tracking-widest mt-4 text-zinc-400">Prabu's
+                            Proteges</span>
+                    </div>
+                    <div
+                        class="bg-surface-container rounded-3xl p-10 flex flex-col justify-center border border-white/10 hover:border-primary transition-all group shadow-xl">
+                        <span
+                            class="text-6xl md:text-7xl font-headline font-black text-primary group-hover:scale-110 transition-transform origin-left text-glow-primary">1-on-1</span>
+                        <span
+                            class="font-headline uppercase text-[10px] font-black tracking-widest mt-4 text-zinc-400">Elite
+                            Mentorship</span>
+                    </div>
+                    <div
+                        class="md:col-span-2 bg-gradient-to-br from-primary-container to-background rounded-3xl p-12 relative overflow-hidden border border-white/10 shadow-2xl">
+                        <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/30 blur-[100px]"></div>
+                        <h4 class="font-headline text-3xl font-black uppercase mb-6 text-white italic">Train with the
+                            Owner</h4>
+                        <p class="text-zinc-200 text-lg font-medium mb-8 max-w-md">Prabu leads the most intense sessions
+                            in the city. Secure a slot in his private performance group.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Section -->
+        <section class="relative py-40 overflow-hidden flex justify-center text-center bg-black">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[500px] bg-primary/40 rounded-full blur-[150px] opacity-40">
+            </div>
+            <div class="relative z-10 px-6 max-w-5xl">
+                <h2
+                    class="font-headline font-black italic text-5xl md:text-[9rem] uppercase tracking-tighter mb-10 text-white kinetic-text">
+                    READY TO <br /><span
+                        class="text-transparent bg-clip-text bg-gradient-to-b from-primary to-blue-700 drop-shadow-[0_10px_20px_rgba(0,132,255,0.5)]">ASCEND?</span>
+                </h2>
+                <p class="text-zinc-300 text-xl md:text-2xl mb-16 max-w-2xl mx-auto font-medium">
+                    Join Prabu and the most exclusive high-performance community. Limited tier memberships available for
+                    the current season.
+                </p>
+
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-black w-full border-t border-white/5">
+        <div class="flex flex-col lg:flex-row justify-between items-center px-10 py-16 gap-8 max-w-screen-2xl mx-auto">
+            <div class="text-2xl font-black text-white font-headline uppercase tracking-widest italic">SPARTANS</div>
+            <div class="flex flex-wrap justify-center gap-6 md:gap-10 items-center">
+                <a class="font-headline text-[10px] tracking-widest uppercase text-zinc-500 hover:text-primary transition-colors font-bold"
+                    href="#">Privacy</a>
+                <a class="font-headline text-[10px] tracking-widest uppercase text-zinc-500 hover:text-primary transition-colors font-bold"
+                    href="#">Terms</a>
+                <a class="font-headline text-[10px] tracking-widest uppercase text-zinc-500 hover:text-primary transition-colors font-bold"
+                    href="#">Membership</a>
+                <a class="font-headline text-[10px] tracking-widest uppercase text-zinc-500 hover:text-primary transition-colors font-bold"
+                    href="#">Location</a>
+            </div>
+            <div
+                class="font-headline text-[10px] tracking-widest uppercase text-zinc-600 font-bold text-center lg:text-right">
+                © 2024 SPARTANS FITNESS CENTER. ALL RIGHTS RESERVED.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
